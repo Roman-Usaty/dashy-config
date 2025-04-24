@@ -11,6 +11,7 @@ appConfig:
   theme: adventure-basic
   layout: auto
   configRefreshInterval: 5  # каждые 5 минут подтягивать конфиг
+  configSource: https://raw.githubusercontent.com/Roman-Usaty/dashy-config/main/conf.yml
 
 sections:
   - name: Мультимедиа
