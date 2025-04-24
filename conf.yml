@@ -6,13 +6,10 @@ pageInfo:
       path: https://github.com/Roman-Usaty/dashy-config
     - title: Proxmox
       path: https://proxmox.home
-
 appConfig:
   theme: adventure-basic
   layout: auto
-  configRefreshInterval: 5  # каждые 5 минут подтягивать конфиг
-  configSource: https://raw.githubusercontent.com/Roman-Usaty/dashy-config/main/conf.yml
-
+  iconSize: medium
 sections:
   - name: Мультимедиа
     icon: mdi:movie
@@ -20,32 +17,117 @@ sections:
       - title: JellyFin
         icon: mdi:video
         url: http://media.home
+        id: 0_11885_jellyfin
       - title: qBitTorrent
         icon: mdi:download
         url: http://qbit.home
+        id: 1_11885_qbittorrent
       - title: Sonarr
         icon: mdi:television
         url: http://sonarr.home
+        id: 2_11885_sonarr
       - title: Radarr
         icon: mdi:filmstrip
         url: http://radarr.home
+        id: 3_11885_radarr
       - title: Prowlarr
         icon: mdi:magnify
         url: http://prowlarr.home
-
+        id: 4_11885_prowlarr
   - name: Хранилище
     icon: mdi:folder
     items:
       - title: File Browser
         icon: mdi:file
         url: http://files.home
-
+        id: 0_9723_filebrowser
   - name: Управление
     icon: mdi:cog
     items:
       - title: Dashy
         icon: mdi:home
         url: http://dashboard.home
+        id: 0_10782_dashy
       - title: AdGuard Home
         icon: mdi:shield
         url: http://adguard.home
+        id: 1_10782_adguardhome
+root@dashy-lxc:/opt/dashy# cat conf.yml 
+pageInfo:
+  title: Home Server Dashboard
+  description: Сервисы домашнего сервера
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Roman-Usaty/dashy-config
+    - title: Proxmox
+      path: https://proxmox.home
+appConfig:
+  theme: one-dark
+  layout: horizontal
+  iconSize: small
+sections:
+  - name: Мультимедиа
+    icon: mdi-multimedia
+    items:
+      - title: JellyFin
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/jellyfin.png
+        url: http://media.home
+        target: newtab
+        id: 0_11885_jellyfin
+      - title: qBitTorrent
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/qbittorrent.png
+        url: http://qbit.home
+        id: 1_11885_qbittorrent
+      - title: Sonarr
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/sonarr.png
+        url: http://sonarr.home
+        id: 2_11885_sonarr
+      - title: Radarr
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/radarr.png
+        url: http://radarr.home
+        id: 3_11885_radarr
+      - title: Prowlarr
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/prowlarr.png
+        url: http://prowlarr.home
+        id: 4_11885_prowlarr
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Хранилище
+    icon: mdi-nas
+    items:
+      - title: File Browser
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/filebrowser.png
+        url: http://files.home
+        id: 0_9723_filebrowser
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+  - name: Управление
+    icon: mdi-cogs
+    items:
+      - title: Dashy
+        icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashy.png
+        url: http://dashboard.home
+        id: 0_10782_dashy
+      - title: AdGuard Home
+        icon: >-
+          https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/adguard-home.png
+        url: http://adguard.home
+        id: 1_10782_adguardhome
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
