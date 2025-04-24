@@ -1,0 +1,50 @@
+pageInfo:
+  title: Home Server Dashboard
+  description: Сервисы домашнего сервера
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Roman-Usaty/dashy-config
+    - title: Proxmox
+      path: https://proxmox.home
+
+appConfig:
+  theme: adventure-basic
+  layout: auto
+  configRefreshInterval: 5  # каждые 5 минут подтягивать конфиг
+
+sections:
+  - name: Мультимедиа
+    icon: mdi:movie
+    items:
+      - title: JellyFin
+        icon: mdi:video
+        url: http://media.home
+      - title: qBitTorrent
+        icon: mdi:download
+        url: http://qbit.home
+      - title: Sonarr
+        icon: mdi:television
+        url: http://sonarr.home
+      - title: Radarr
+        icon: mdi:filmstrip
+        url: http://radarr.home
+      - title: Prowlarr
+        icon: mdi:magnify
+        url: http://prowlarr.home
+
+  - name: Хранилище
+    icon: mdi:folder
+    items:
+      - title: File Browser
+        icon: mdi:file
+        url: http://files.home
+
+  - name: Управление
+    icon: mdi:cog
+    items:
+      - title: Dashy
+        icon: mdi:home
+        url: http://dashboard.home
+      - title: AdGuard Home
+        icon: mdi:shield
+        url: http://adguard.home
